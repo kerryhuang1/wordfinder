@@ -13,4 +13,4 @@ Download all the .py files and word_dictionary.txt into the same directory. Play
 
 ## How it works
 
-The 8-by-8 board is first initialized with a selection of random words and commonly appearing letters. After you select a words and the tiles you used reset, a depth-first search algorithm tests random letters on those reset tiles, choosing the first one which guarantees valid word combinations with its surrounding tiles. 
+The 8-by-8 board is first initialized with a selection of random words and commonly appearing letters. After you select a word and the tiles you used reset, a depth-first search algorithm tests random letters on those reset tiles, choosing the first one which guarantees valid word combinations with its surrounding tiles. 
