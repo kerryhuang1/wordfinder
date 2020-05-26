@@ -3,11 +3,12 @@ from base import *
 
 window = GraphWin("WordFinder", 768, 768, autoflush=False)
 window.setCoords(0, 0, 768, 768)
-bg_color = 'white'
+bg_color = 'black'
 window.setBackground(bg_color)
 
 def drawtext(text, size=24, font='helvetica'):
 	text.setFace(font)
+	text.setFill("white")
 	text.setSize(size)
 	text.draw(window)
 	return text
@@ -36,14 +37,6 @@ def drawboard(b):
 	for i in range(len(b.grid)):
 		for j in range(len(b.grid[i])): 
 			tile = b.grid[i][j]
-			if 4 <= tile.score <= 5:
-				tile.block.setOutline('blue')
-			elif 6 <= tile.score <= 8:
-				tile.block.setWidth(4)
-				tile.block.setOutline('purple')
-			elif 9 <= tile.score <= 10:
-				tile.block.setWidth(4)
-				tile.block.setOutline('yellow')
 			scoretext = Text(Point(tile.block.getCenter().getX(), tile.block.getCenter().getY() - 16), str(tile.score))
 			scoretext.setSize(16)
 			scoretext.setFace('courier')

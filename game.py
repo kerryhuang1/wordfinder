@@ -58,7 +58,7 @@ while attempts > 0:
 				if tile.block.getP1().getX() < pt.getX() < tile.block.getP2().getX() and tile.block.getP1().getY() < pt.getY() < tile.block.getP2().getY():
 					if tile not in selected and (tile in selected[-1].valid_directionals if selected else True):
 						selected.append(tile)
-						tile.block.setFill('gray')
+						tile.block.setFill('green')
 					
 					elif tile is selected[-1]:
 						selected.remove(tile)
